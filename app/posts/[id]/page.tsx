@@ -1,8 +1,8 @@
-interface PostProps {
-  params: { id: string };
-}
+'use client'
+import { useParams } from "next/navigation";
 
-export default async function Post({ params }: PostProps) {
-  const { id } = params;
+
+export default  function Post() {
+  const { id } = useParams()
   return <h1>Post ID: {id}</h1>;
 }
